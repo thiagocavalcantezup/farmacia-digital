@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;

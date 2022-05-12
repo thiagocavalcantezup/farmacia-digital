@@ -1,6 +1,5 @@
-package br.com.zup.edu.pharmacia.adapters.persistence.categorias;
+package br.com.zup.edu.pharmacia.adapters.persistence.farmaceuticas;
 
-import br.com.zup.edu.pharmacia.adapters.persistence.farmaceuticas.FarmaceuticaRepository;
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.CadastraNovaFarmaceuticaRepository;
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.Farmaceutica;
 import org.springframework.stereotype.Component;

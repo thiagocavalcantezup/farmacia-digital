@@ -2,7 +2,10 @@ package br.com.zup.edu.pharmacia.application.farmaceuticas;
 
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.CriaNovaFarmaceutica;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
