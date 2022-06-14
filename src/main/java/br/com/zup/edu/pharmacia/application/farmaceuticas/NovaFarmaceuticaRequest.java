@@ -1,14 +1,16 @@
 package br.com.zup.edu.pharmacia.application.farmaceuticas;
 
-import br.com.zup.edu.pharmacia.domain.farmaceuticas.DadosFarmaceutica;
-import br.com.zup.edu.pharmacia.domain.farmaceuticas.Farmaceutica;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import org.hibernate.validator.constraints.br.CNPJ;
+import static com.fasterxml.jackson.annotation.JsonCreator.Mode.PROPERTIES;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-import static com.fasterxml.jackson.annotation.JsonCreator.Mode.PROPERTIES;
+import org.hibernate.validator.constraints.br.CNPJ;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+
+import br.com.zup.edu.pharmacia.domain.farmaceuticas.DadosFarmaceutica;
+import br.com.zup.edu.pharmacia.domain.farmaceuticas.Farmaceutica;
 
 public class NovaFarmaceuticaRequest implements DadosFarmaceutica {
 
@@ -27,9 +29,7 @@ public class NovaFarmaceuticaRequest implements DadosFarmaceutica {
     private String telefonePrincipal;
 
     @JsonCreator(mode = PROPERTIES)
-    public NovaFarmaceuticaRequest(String nome,
-                                   String documento,
-                                   String emailDeContato,
+    public NovaFarmaceuticaRequest(String nome, String documento, String emailDeContato,
                                    String telefonePrincipal) {
         this.nome = nome;
         this.documento = documento;
@@ -37,9 +37,9 @@ public class NovaFarmaceuticaRequest implements DadosFarmaceutica {
         this.telefonePrincipal = telefonePrincipal;
     }
 
-
     @Override
     public Farmaceutica toModel() {
         return new Farmaceutica(nome, documento, emailDeContato, telefonePrincipal);
     }
+
 }

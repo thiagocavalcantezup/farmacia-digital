@@ -1,8 +1,9 @@
 package br.com.zup.edu.pharmacia.adapters.persistence.farmaceuticas;
 
+import org.springframework.stereotype.Component;
+
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.CadastraNovaFarmaceuticaRepository;
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.Farmaceutica;
-import org.springframework.stereotype.Component;
 
 @Component
 public class SqlFarmaceutivaAdapter implements CadastraNovaFarmaceuticaRepository {

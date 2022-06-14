@@ -1,10 +1,10 @@
 package br.com.zup.edu.pharmacia.application.categorias;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
+import static com.fasterxml.jackson.annotation.JsonCreator.Mode.PROPERTIES;
 
 import javax.validation.constraints.NotBlank;
 
-import static com.fasterxml.jackson.annotation.JsonCreator.Mode.PROPERTIES;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class NovaCategoriaRequest {
 
@@ -19,4 +19,5 @@ public class NovaCategoriaRequest {
     public String getNome() {
         return nome;
     }
+
 }

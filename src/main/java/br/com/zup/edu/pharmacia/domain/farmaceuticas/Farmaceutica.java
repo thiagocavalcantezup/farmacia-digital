@@ -1,6 +1,8 @@
 package br.com.zup.edu.pharmacia.domain.farmaceuticas;
 
-import org.hibernate.validator.constraints.br.CNPJ;
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,9 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import org.hibernate.validator.constraints.br.CNPJ;
 
 @Entity
 public class Farmaceutica {
@@ -35,11 +36,8 @@ public class Farmaceutica {
     @NotBlank
     private String telefonePrincipal;
 
-    public Farmaceutica(String nome,
-                        String documento,
-                        String emailDeContato,
+    public Farmaceutica(String nome, String documento, String emailDeContato,
                         String telefonePrincipal) {
-
         this.nome = nome;
         this.documento = documento;
         this.emailDeContato = emailDeContato;
@@ -50,7 +48,7 @@ public class Farmaceutica {
      * @deprecated para uso dos frameworks
      */
     @Deprecated
-    public Farmaceutica() { }
+    public Farmaceutica() {}
 
     public Long getId() {
         return id;
@@ -58,8 +56,10 @@ public class Farmaceutica {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Farmaceutica that = (Farmaceutica) o;
         return documento.equals(that.documento);
     }
@@ -68,4 +68,5 @@ public class Farmaceutica {
     public int hashCode() {
         return Objects.hash(documento);
     }
+
 }

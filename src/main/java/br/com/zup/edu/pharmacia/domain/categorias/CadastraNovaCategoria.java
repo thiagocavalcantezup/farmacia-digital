@@ -12,7 +12,7 @@ public class CadastraNovaCategoria {
     }
 
     public Categoria cadastraNovaCategoria(String nome) {
-
         return repository.salva(new Categoria(nome));
     }
+
 }

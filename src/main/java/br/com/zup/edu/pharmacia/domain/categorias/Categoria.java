@@ -1,13 +1,14 @@
 package br.com.zup.edu.pharmacia.domain.categorias;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
-import java.util.Objects;
-
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 public class Categoria {
@@ -20,12 +21,11 @@ public class Categoria {
     @Column(unique = true)
     private String nome;
 
-
     /**
      * @deprecated para uso de frameworks
      */
     @Deprecated
-    public Categoria() { }
+    public Categoria() {}
 
     public Categoria(String nome) {
         this.nome = Objects.requireNonNull(nome, "nome nao pode ser nulo");
@@ -37,8 +37,10 @@ public class Categoria {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Categoria categoria = (Categoria) o;
         return nome.equals(categoria.nome);
     }
@@ -47,4 +49,5 @@ public class Categoria {
     public int hashCode() {
         return Objects.hash(nome);
     }
+
 }

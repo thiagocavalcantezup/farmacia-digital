@@ -1,8 +1,9 @@
 package br.com.zup.edu.pharmacia.adapters.persistence.categorias;
 
+import org.springframework.stereotype.Component;
+
 import br.com.zup.edu.pharmacia.domain.categorias.CadastraNovaCategoriaRepository;
 import br.com.zup.edu.pharmacia.domain.categorias.Categoria;
-import org.springframework.stereotype.Component;
 
 @Component
 public class SqlCategoriaAdapter implements CadastraNovaCategoriaRepository {
