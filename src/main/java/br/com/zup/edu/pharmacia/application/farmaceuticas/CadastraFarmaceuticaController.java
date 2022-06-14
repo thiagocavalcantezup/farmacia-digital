@@ -26,7 +26,7 @@ public class CadastraFarmaceuticaController {
     @PostMapping
     public ResponseEntity<?> cadastra(@RequestBody @Valid NovaFarmaceuticaRequest request,
                                       UriComponentsBuilder uriBuilder) {
-        var farmaceutica = service.cadastraNovaFarmceutica(request);
+        var farmaceutica = service.cadastraNovaFarmaceutica(request);
 
         URI location = uriBuilder.path("/farmaceuticas/{id}")
                                  .buildAndExpand(farmaceutica.getId())

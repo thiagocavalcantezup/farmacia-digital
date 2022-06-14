@@ -44,6 +44,10 @@ public class Farmaceutica {
         this.telefonePrincipal = telefonePrincipal;
     }
 
+    public Farmaceutica(Long id) {
+        this.id = id;
+    }
+
     /**
      * @deprecated para uso dos frameworks
      */

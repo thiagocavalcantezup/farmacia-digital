@@ -11,7 +11,7 @@ public class CriaNovaFarmaceutica {
         this.repository = repository;
     }
 
-    public Farmaceutica cadastraNovaFarmceutica(DadosFarmaceutica dados) {
+    public Farmaceutica cadastraNovaFarmaceutica(DadosFarmaceutica dados) {
         var farmaceutica = dados.toModel();
 
         return repository.salva(farmaceutica);

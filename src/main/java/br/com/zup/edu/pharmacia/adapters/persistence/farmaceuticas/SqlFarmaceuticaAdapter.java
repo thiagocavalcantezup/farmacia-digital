@@ -6,11 +6,11 @@ import br.com.zup.edu.pharmacia.domain.farmaceuticas.CadastraNovaFarmaceuticaRep
 import br.com.zup.edu.pharmacia.domain.farmaceuticas.Farmaceutica;
 
 @Component
-public class SqlFarmaceutivaAdapter implements CadastraNovaFarmaceuticaRepository {
+public class SqlFarmaceuticaAdapter implements CadastraNovaFarmaceuticaRepository {
 
     private final FarmaceuticaRepository repository;
 
-    public SqlFarmaceutivaAdapter(FarmaceuticaRepository repository) {
+    public SqlFarmaceuticaAdapter(FarmaceuticaRepository repository) {
         this.repository = repository;
     }
 

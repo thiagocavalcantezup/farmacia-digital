@@ -27,6 +27,10 @@ public class Categoria {
     @Deprecated
     public Categoria() {}
 
+    public Categoria(Long id) {
+        this.id = id;
+    }
+
     public Categoria(String nome) {
         this.nome = Objects.requireNonNull(nome, "nome nao pode ser nulo");
     }
